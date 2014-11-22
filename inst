@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# kludge - install manually, until we get the Tomcat equiv of jboss-web.xml
+# or we move to WildFly and use it.
+cp target/mailman-1.0-SNAPSHOT.war /var/tomcat/webapps/mailman.war
