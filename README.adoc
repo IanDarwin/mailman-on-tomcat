@@ -26,7 +26,7 @@ send money first.
 You also have to ensure that the CGI scripts runs with the correct gid
 (group id). Either:
 
-* Re-build Mailman with the configuration option to change the group id, or
+* Re-build Mailman with the _--with-mail-gid=_ configuration option to change the group id, or
 * Change the user that Tomcat runs on to agree with what Mailman expects.
 For example, on http://OpenBSD.org[OpenBSD (the secure server OS that I
 use)], which provides pre-compiled packages of third-party software, I just
@@ -35,9 +35,9 @@ to change permissions on some files that Tomcat is using.
 
 You also have to ensure that incoming mail runs with the correct gid.
 Same choices as above.
-Again on OpenBSD, I changed the _smtpd user to be in group daemon(1).
-
-*You will need to consider the security implications of these changes on your system
+On OpenBSD, I made and committed (on 2014-11-22) an update to the Mailman port so that the default "flavor"
+expects the _smtpd user; before this got committed, I had changed the _smtpd user  to be in group daemon(1).
+Either way works, but *you need to consider the security implications of these changes on your system
 before making them*.
 
 If necessary, change the IMAGE_LOGOS in your _/usr/local/lib/mailman/Mailman/mm_cfg.py_ to, e.g.:
