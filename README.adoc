@@ -28,7 +28,7 @@ You also have to ensure that the CGI scripts runs with the correct gid
 master.passwd so that the _tomcat account is group www(67).
 
 You also have to ensure that incoming mail runs with the correct gid.
-Again op OpenBSD, change the _smtpd user to be in group daemon(1).
+Again on OpenBSD, change the _smtpd user to be in group daemon(1).
 
 === Remaining Problems
 
