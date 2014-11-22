@@ -53,8 +53,13 @@
     </servlet>
 
     <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/icons/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
         <servlet-name>cgi</servlet-name>
-        <url-pattern>/cgi-bin/*</url-pattern>
+        <url-pattern>/*</url-pattern>
     </servlet-mapping>
 
 </web-app>
