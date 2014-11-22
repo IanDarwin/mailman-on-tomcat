@@ -17,8 +17,8 @@ it will just work out of the box.
 These instructions are for *Nix. Windows users will need more work. If you want help,
 send money first.
 
-* Clone this repo;
-* cd into it;
+* Clone this repo
+* cd into it
 * run the _mkscripts_ shell script
 * run _mvn package_
 * run the deploy script, or otherwise install the target/*.war file as "mailman".
@@ -31,6 +31,8 @@ You also have to ensure that incoming mail runs with the correct gid.
 Again op OpenBSD, change the _smtpd user to be in group daemon(1).
 
 === Remaining Problems
+
+Should put in an exec plugin in pom.xml to automate running of _mkscripts_.
 
 The paths in mkscript are hard-coded and will need to be tweaked if you installed mailman
 somewhere else.
