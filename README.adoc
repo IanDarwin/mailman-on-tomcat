@@ -24,11 +24,18 @@ send money first.
 * run the deploy script, or otherwise install the target/*.war file as "mailman".
 
 You also have to ensure that the CGI scripts runs with the correct gid
-(group id).  For example, on http://OpenBSD.org[OpenBSD (the secure server OS that I use)], I changed
-master.passwd so that the _tomcat account is group www(67).
+(group id). Either:
+
+* Re-build Mailman with the configuration option to change the group id, or
+* Change the user that Tomcat runs on to agree with what Mailman expects.
+For example, on http://OpenBSD.org[OpenBSD (the secure server OS that I
+use)], which provides pre-compiled packages of third-party software, I just
+changed master.passwd so that the _tomcat account is group www(67). You need
+to change permissions on some files that Tomcat is using.
 
 You also have to ensure that incoming mail runs with the correct gid.
-Again on OpenBSD, change the _smtpd user to be in group daemon(1).
+Same choices as above.
+Again on OpenBSD, I changed the _smtpd user to be in group daemon(1).
 
 === Remaining Problems
 
