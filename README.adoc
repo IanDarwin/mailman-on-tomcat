@@ -25,7 +25,8 @@ Again op OpenBSD, change the _smtpd user to be in group daemon(1).
 === Remaining Problems
 
 Icons don't work if you have them in the same deployment; pu them in a different web context,
-or, figure out how to change the servlet-mappings.
+or, figure out how to change the servlet-mappings (and let me know). Icons are only used on the 
+home page, so they're not critical.
 
 
 Also want to try this under WildFly (JBossAS 8.+), haven't had time yet.
