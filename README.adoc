@@ -17,9 +17,11 @@ it will just work out of the box.
 These instructions are for *Nix. Windows users will need more work. If you want help,
 send money first.
 
-# Clone this repo;
-# cd into it;
-# run the mkscripts shell script
+* Clone this repo;
+* cd into it;
+* run the _mkscripts_ shell script
+* run _mvn package_
+* run the deploy script, or otherwise install the target/*.war file as "mailman".
 
 You also have to ensure that the CGI scripts runs with the correct gid
 (group id).  For example, on http://OpenBSD.org[OpenBSD (the secure server OS that I use)], I changed
@@ -36,7 +38,6 @@ somewhere else.
 Icons don't work if you have them in the same deployment; pu them in a different web context,
 or, figure out how to change the servlet-mappings (and let me know). Icons are only used on the 
 home page, so they're not critical.
-
 
 Also want to try this under WildFly (JBossAS 8.+), haven't had time yet.
 
