@@ -1,0 +1,33 @@
+== mailman-on-tomcat
+
+Everybody says that Mailman can't work under Tomcat, so I did it.
+
+The basic mechaminism is to enable the Tomcat 'cgi' servlet, and map requiests on /mailman
+to the cgi servlet, and create one-line Perl wrappers that invoke the actual cgi-bin.
+This is b/c the Tomcat servlet requires an interpreter be used (without modifying its source.
+
+=== HowTo
+
+These instructions are for *Nix. Windows users will need more work. If you want help,
+send money first.
+
+# Clone this repo;
+# cd into it;
+# run the mkscripts shell script
+
+You also have to ensure that the CGI scripts runs with the correct gid
+(group id).  On OpenBSD (the secure server OS that I use), I changed
+master.passwd so that the _tomcat account is group www(67).
+
+You also have to ensure that incoming mail runs with the correct gig.
+Again op OpenBSD, change the _smtpd user to be in group daemon(1).
+
+=== Remaining Problems
+
+Icons don't work if you have them in the same deployment; pu them in a different web context,
+or, figure out how to change the servlet-mappings.
+
+
+Also want to try this under WildFly (JBossAS 8.+), haven't had time yet.
+
+
