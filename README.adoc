@@ -19,9 +19,9 @@ send money first.
 
 * Clone this repo
 * cd into it
-* run the _mkscripts_ shell script
-* run _mvn package_
-* run the deploy script, or otherwise install the target/*.war file as "mailman".
+* Examine the _mkscripts_ shell script; change the path in it if needed; run it in this directory.
+* Run _mvn package_
+* Run the deploy script, or otherwise install the target/*.war file as "mailman.war".
 
 You also have to ensure that the CGI scripts runs with the correct gid
 (group id). Either:
