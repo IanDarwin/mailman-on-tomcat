@@ -48,6 +48,4 @@ Icons don't work if you have them in the same deployment; pu them in a different
 or, figure out how to change the servlet-mappings (and let me know). Icons are only used on the 
 home page, so they're not critical.
 
-Also want to try this under WildFly (JBossAS 8.+), haven't had time yet.
-
-
+Also want to try this under http://wildfly.org/[WildFly (JBossAS 8.+)], haven't had time yet.
