@@ -37,6 +37,9 @@ You also have to ensure that incoming mail runs with the correct gid.
 Same choices as above.
 Again on OpenBSD, I changed the _smtpd user to be in group daemon(1).
 
+*You will need to consider the security implications of these changes on your system
+before making them*.
+
 If necessary, change the IMAGE_LOGOS in your _/usr/local/lib/mailman/Mailman/mm_cfg.py_ to, e.g.:
 
 	IMAGE_LOGOS = '/mailman/icons/'
