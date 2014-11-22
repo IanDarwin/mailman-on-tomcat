@@ -1,10 +1,14 @@
 == mailman-on-tomcat
 
-Everybody says that Mailman can't work under Tomcat, so I did it.
+Everybody says that http://www.gnu.org/software/mailman/[Mailman] can't be made
+to work under http://tomcat.apache.org[Tomcat], so I did it.
 
 The basic mechaminism is to enable the Tomcat 'cgi' servlet, and map requiests on /mailman
 to the cgi servlet, and create one-line Perl wrappers that invoke the actual cgi-bin.
 This is b/c the Tomcat servlet requires an interpreter be used (without modifying its source.
+
+This project generates a War file that you just deploy to Tomcat and, on some systems,
+it will just work out of the box.
 
 === HowTo
 
@@ -16,13 +20,16 @@ send money first.
 # run the mkscripts shell script
 
 You also have to ensure that the CGI scripts runs with the correct gid
-(group id).  On OpenBSD (the secure server OS that I use), I changed
+(group id).  For example, on http://OpenBSD.org[OpenBSD (the secure server OS that I use)], I changed
 master.passwd so that the _tomcat account is group www(67).
 
-You also have to ensure that incoming mail runs with the correct gig.
+You also have to ensure that incoming mail runs with the correct gid.
 Again op OpenBSD, change the _smtpd user to be in group daemon(1).
 
 === Remaining Problems
+
+The paths in mkscript are hard-coded and will need to be tweaked if you installed mailman
+somewhere else.
 
 Icons don't work if you have them in the same deployment; pu them in a different web context,
 or, figure out how to change the servlet-mappings (and let me know). Icons are only used on the 
