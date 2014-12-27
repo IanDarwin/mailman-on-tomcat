@@ -46,6 +46,8 @@ If necessary, change the IMAGE_LOGOS in your _/usr/local/lib/mailman/Mailman/mm_
 
 === Remaining Problems
 
+Uh, no archives yet...
+
 Should put in an exec plugin in pom.xml to automate running of _mkscripts_.
 
 The paths in mkscript are hard-coded and will need to be tweaked if you installed mailman
