@@ -3,9 +3,9 @@
 Everybody says that http://www.gnu.org/software/mailman/[Mailman] can't be made
 to work under http://tomcat.apache.org[Tomcat], so I did it.
 
-The basic mechanism is to enable the Tomcat 'cgi' servlet, map requiests on
-/mailman to the cgi servlet, and create one-line Perl wrappers (in this
-webapp's cgi directory) that invoke the actual cgi-bin.  This is because the
+The basic mechanism is to create a /mailman web app, enable the Tomcat 'cgi' servlet, 
+map requiests on /mailman to the cgi servlet, and create one-line Perl wrappers (in this
+webapp's cgi directory) that invoke the actual cgi-bin.  This step is because the
 Tomcat servlet apparently requires an interpreter be used (without modifying
 its source).
 
